@@ -34,6 +34,17 @@ class SiteController extends Controller
         );
     }
 
+    protected function verbs()
+{
+  return [
+    'index' => ['GET', 'HEAD'],
+    'view' => ['GET', 'HEAD'],
+    'create' => ['POST'],
+    'update' => ['PUT', 'PATCH'],
+    'delete' => ['DELETE'],
+  ];
+}
+
     /**
      * Lists all Users_table models.
      *
